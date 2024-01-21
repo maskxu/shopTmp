@@ -1,0 +1,70 @@
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.product__accordion h2{
+    text-transform: uppercase;
+}
+.product-form__input.product-form__quantity, .product-form__input.product-form__input--dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.product-form__input.product-form__input--dropdown, variant-selects {
+    margin-bottom: 0!important;
+}
+.product-form__input label {
+    margin-bottom: 0!important;
+}
+.product__accordion.accordion {
+    margin-top: 0;
+    border-top: 1px solid black!important;
+}
+.product__accordion:last-child {
+    border-bottom: 1px solid black;
+}
+.product-form__quantity {
+    margin-top: 0!important;
+}
+.title-section {
+    display: flex;
+    justify-content: space-between;
+}
+#cart-notification {
+    background: white;
+}
+.home-block {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.home-block-text {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 2rem;
+}
+.home-block-image {
+    max-width: 50%;
+}
+.menu-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.is-newsletter {
+    font-size: 1.4rem;
+}
+details[open]>.search-modal {
+    background: white;
+}
+.card-information-row {
+    display: flex;
+    justify-content: space-between;
+}
+#ContactForm input, #ContactForm textarea {
+    border: 1px black solid;
+}

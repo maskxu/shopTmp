@@ -1,0 +1,29 @@
+{% comment %}
+  Renders a standard dropdown style menu for the header.
+
+  Usage:
+  {% render 'header-menu' %}
+{% endcomment %}
+
+<div class="nav_left">
+    <a data-w-id="2522389c-831d-9e62-1f60-34f4c6a07b1d" href="#" class="nav_menu-trigger w-inline-block">
+        <div class="menu-trigger_line"></div>
+        <div class="menu-trigger_line"></div>
+    </a>
+    {%- for link in section.settings.menu.links -%}
+        <a
+            id="HeaderMenu-{{ link.handle }}"
+            href="{{ link.url }}"
+            class="nav_link hide-mobile-landscape w-inline-block"
+            {% if link.current %}
+                aria-current="page"
+            {% endif %}
+        >
+            <span
+                class="{%- if link.current %}header__active-menu-item{% endif %} menu-text uppercase"
+            >
+              {{- link.title | escape -}}
+            </span>
+        </a>
+    {%- endfor -%}
+</div>

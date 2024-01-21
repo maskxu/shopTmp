@@ -1,0 +1,157 @@
+<div class="padding-section-tiny">
+    <div class="footer_flex-wrapper">
+        <div class="footer_content-wrapper">
+            <div class="padding-global">
+                <div class="footer_content-flex-wrapper">
+                    <div class="footer_column is-newsletter">
+                        <h2 class="heading-style-h4"><span class="text-span">Stay with <strong class="bold-text">LARTEDELSENTIRE</strong> <sup>™</sup></span>
+                        </h2>
+                        <p class='margin-xlarge margin-top'>
+                            Join our community to receive the latest news, offers, and events from LARTEDELSENTIRE. Subscribe to our newsletters for early access to exciting updates. Rest assured; your privacy is our priority – your email will solely be used for this purpose. Unsubscribe anytime by clicking the link in our newsletters. Thank you for joining us on the multisensory journey.
+                        </p>
+                        <div class="form-block w-form">
+                            {% comment %}<form id="email-form" name="email-form" data-name="Email Form" method="get" class="form">{% endcomment %}
+                            {% comment %}<input type="email" class="text-field text-size-regular w-input" maxlength="256"{% endcomment %}
+                            {% comment %}name="Email-2" data-name="Email 2" placeholder="Email" id="Email-2" required="">{% endcomment %}
+                            {% comment %}<div class="submit-button_wrapper">{% endcomment %}
+                            {% comment %}<input type="submit" value="Sign up" data-wait="Working" class="submit-button w-button">{% endcomment %}
+                            {% comment %}</div>{% endcomment %}
+                            {% comment %}</form>{% endcomment %}
+                            {%- form 'customer', id: 'email-form', class: 'footer__newsletter newsletter-form form' -%}
+                                <input type="hidden" name="contact[tags]" value="newsletter">
+                                <input
+                                        id="NewsletterForm--{{ section.id }}"
+                                        type="email"
+                                        name="contact[email]"
+                                        placeholder="Enter your email address"
+                                        class="field__input text-field text-size-regular w-input"
+                                        value="{{ form.email }}"
+                                        aria-required="true"
+                                        autocorrect="off"
+                                        autocapitalize="off"
+                                        autocomplete="email"
+                                        {% if form.errors %}
+                                            autofocus
+                                            aria-invalid="true"
+                                            aria-describedby="ContactFooter-error"
+                                        {% elsif form.posted_successfully? %}
+                                            aria-describedby="ContactFooter-success"
+                                        {% endif %}
+                                        required
+                                >
+                                {% comment %}<label class="field__label" for="NewsletterForm--{{ section.id }}">{% endcomment %}
+                                {% comment %}{{ 'newsletter.label' | t }}{% endcomment %}
+                                {% comment %}</label>{% endcomment %}
+
+                                <input id='Subscribe' type="submit" value="Sign up" data-wait="Working"
+                                       class="submit-button w-button"
+                                       aria-label="{{ 'newsletter.button_label' | t }}">
+                                {% comment %}<button{% endcomment %}
+                                {% comment %}type="submit"{% endcomment %}
+                                {% comment %}class="newsletter-form__button field__button"{% endcomment %}
+                                {% comment %}name="commit"{% endcomment %}
+                                {% comment %}id="Subscribe"{% endcomment %}
+                                {% comment %}aria-label="{{ 'newsletter.button_label' | t }}"{% endcomment %}
+                                {% comment %}>{% endcomment %}
+                                {% comment %}{% render 'icon-arrow' %}{% endcomment %}
+                                {% comment %}</button>{% endcomment %}
+                                {%- if form.errors -%}
+                                    <small class="newsletter-form__message form__message" id="ContactFooter-error">
+                                        {%- render 'icon-error' -%}
+                                        {{- form.errors.translated_fields.email | capitalize }}
+                                        {{ form.errors.messages.email -}}
+                                    </small>
+                                {%- endif -%}
+                                {%- if form.posted_successfully? -%}
+                                    <h3
+                                            class="newsletter-form__message newsletter-form__message--success form__message"
+                                            id="ContactFooter-success"
+                                            tabindex="-1"
+                                            autofocus
+                                    >
+                                        {% render 'icon-success' -%}
+                                        {{- 'newsletter.success' | t }}
+                                    </h3>
+                                {%- endif -%}
+                            {%- endform -%}
+                            <div class="success-message w-form-done">
+                                <div>All set. 👍</div>
+                            </div>
+                            <div class="error-message w-form-fail">
+                                <div>Something went wrong.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer_column">
+                        <div class="text-size-regular uppercase title text-weight-bold margin-bottom">Customer Care</div>
+                        <div class="padding-bottom padding-small"></div>
+                        <a href="/pages/contact-us" class="footer_link-block w-inline-block">
+                            <div class="text-size-regular">Contact Us</div>
+                        </a>
+                        <div class="padding-bottom padding-xsmall"></div>
+                        <a href="/pages/faqs" class="footer_link-block w-inline-block">
+                            <div class="text-size-regular">FAQs</div>
+                        </a>
+                        <div class="padding-bottom padding-xsmall"></div>
+                        <a href="/pages/shipping" class="footer_link-block w-inline-block">
+                            <div class="text-size-regular">Shipping</div>
+                        </a>
+                        <div class="padding-bottom padding-xsmall"></div>
+                        <a href="/pages/return" class="footer_link-block w-inline-block">
+                            <div class="text-size-regular">Return</div>
+                        </a>
+                        <div class="padding-bottom padding-xsmall"></div>
+                        <a href="/pages/privacy-policy" class="footer_link-block w-inline-block">
+                            <div class="text-size-regular">Privacy Policy</div>
+                        </a>
+                        <div class="padding-bottom padding-xsmall"></div>
+                        <a href="/pages/terms-of-lartedelsentire-website-use" class="footer_link-block w-inline-block">
+                            <div class="text-size-regular">Terms & Conditions</div>
+                        </a>
+                    </div>
+                    <div class="footer_column">
+                        <div class="text-size-regular uppercase title text-weight-bold margin-bottom">Social Connect</div>
+                        <div class="padding-bottom padding-small"></div>
+                        <a href="https://www.instagram.com/lartedelsentire/" class="footer_link-block w-inline-block">
+                            <div class="text-size-regular">Instagram</div>
+                        </a>
+                        <div class="padding-bottom padding-xsmall"></div>
+                        <a href="https://www.facebook.com/lartedelsentire/" class="footer_link-block w-inline-block">
+                            <div class="text-size-regular">Facebook</div>
+                        </a>
+                        <div class="padding-bottom padding-xsmall"></div>
+                        <a href="https://www.youtube.com/@Lartedelsentire" class="footer_link-block w-inline-block">
+                            <div class="text-size-regular">Youtube</div>
+                        </a>
+                        <div class="padding-bottom padding-xsmall"></div>
+                        <a href="https://open.spotify.com/user/31h53esbzkwjl5c7qdazjf6sua7m" class="footer_link-block w-inline-block">
+                            <div class="text-size-regular">Spotify</div>
+                        </a>
+                        <div class="padding-bottom padding-xsmall"></div>
+                        <a href="https://soundcloud.com/user-59539912" class="footer_link-block w-inline-block">
+                            <div class="text-size-regular">Soundcloud</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="padding-xlarge center">
+                    <span class='copyright__content'>© 2023, LARTEDELSENTIRE. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+  "name": "Section name",
+  "settings": [],
+  "tag": "footer",
+  "class": "footer_component"
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
